@@ -27,6 +27,7 @@ def bisekcja(f, a, b, tol = 0.00001, ftol=0.0001):
     last_x = x - 1 #ustawiam tak bo jakies musi byc,
     #a w ten sposob na pewno nie spelni warunku dokladnosci
     while True:
+        x_steps.append(x)
         n += 1
         #sprawdzenie dokladnosci
         if((abs(f(x)) <= ftol) or abs(x-last_x) <= tol):
@@ -39,4 +40,5 @@ def bisekcja(f, a, b, tol = 0.00001, ftol=0.0001):
         #wyznaczenie nowego srodka i zapisanie poprzedniego
         last_x = x
         x = (a+b)/2
+
     
