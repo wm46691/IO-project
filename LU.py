@@ -27,26 +27,15 @@ def Doolittle(A):
     return L, U
 
 
-A = [[60, 30, 20],
-    [30, 20, 15],
-    [20, 15, 12]]
+def Rozwiazanie(L, U, A, b):
 
-b = np.array([3, -1, 1]).reshape((3, 1))
+    n = len(A)
+    Y = np.zeros((n, 1))
+    X = np.zeros((n, 1))
+    Y = np.dot(np.linalg.inv(L), b)
+    X = np.dot(np.linalg.inv(U), Y)
 
-
-L, U = LU.Doolittle(A)
-print(L)
-print(U)
-
-n = len(A)
-Y = np.zeros((n, 1))
-X = np.zeros((n, 1))
-
-Y = np.dot(np.linalg.inv(L), b)
-
-X = np.dot(np.linalg.inv(U), Y)
+    return X
 
 
-
-print(X)
-
+    
