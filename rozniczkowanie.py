@@ -20,11 +20,12 @@ def pochodne(a, b, ilosc_punktow, x, krok = 0.25, rodzaj = 'wprzod'):
     elif rodzaj == 'wstecz':
         return (x(wartosci-2*krok)-4*x(wartosci-krok)+3*x(wartosci))/2*krok
     
-    
-a = 0
-b = 6
-ilosc_punktow = 1000000
-x = np.linspace(a, b, ilosc_punktow)
-y = pochodne(a, b, ilosc_punktow, np.cos, 0.25, 'wstecz')
-plt.plot(x, y)
-plt.show()
+
+
+# a = 0
+# b = 6
+# ilosc_punktow = 1000000
+# x = np.linspace(a, b, ilosc_punktow)
+# y = pochodne(a, b, ilosc_punktow, np.cos, 0.25, 'wstecz')
+# plt.plot(x, y)
+# plt.show()
