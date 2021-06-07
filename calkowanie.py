@@ -46,5 +46,5 @@ def metoda_prostokatow(f, a, b, k=0):
 def func(x):
     return x
 
-a,b,c=metoda_prostokatow(func, -2, 2, 0.3)
-print(a)
+# a,b,c=metoda_prostokatow(func, -2, 2, 0.3)
+# print(a)
