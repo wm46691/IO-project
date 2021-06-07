@@ -7,11 +7,11 @@ def Doolittle(A):
     U = np.zeros((n, n))
 
 
-    for k in range(n):#dobrze
+    for k in range(n):
         L[k][k] = 1
-        for j in range(k, n):#dobrze
+        for j in range(k, n):
             suma = 0
-            for s in range(k):#dobrze
+            for s in range(k):
                 suma = suma + L[k][s]*U[s][j]
 
             U[k][j] = A[k][j] - suma
@@ -22,7 +22,6 @@ def Doolittle(A):
                     suma = suma + L[i][s]*U[s][k]
 
                 L[i][k] = (A[i][k] - suma)/U[k][k]
-
 
     return L, U
 
@@ -35,7 +34,7 @@ def Rozwiazanie(L, U, A, b):
     Y = np.dot(np.linalg.inv(L), b)
     X = np.dot(np.linalg.inv(U), Y)
 
-    return X
+    return X, Y
 
 
     
