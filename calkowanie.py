@@ -41,7 +41,7 @@ def metoda_prostokatow(f, a, b, k=0):
     calka += c
     c_steps.append(c)
 
-    return calka, k_steps, c_steps
+    return abs(calka), k_steps, c_steps
 
 def func(x):
     return x
