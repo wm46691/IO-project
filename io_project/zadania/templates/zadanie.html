@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="nazwa">
+        {% block nazwa %}
+        tu sie pojawi nazwa
+        {% endblock %}
+    </div>
+    <div id="polecenie">
+        {% block polecenie %}
+        tu sie wyswietli polecenie
+        {% endblock %}
+    </div>
+
+    <div id="odpowiedz">
+        {% block odpowiedz %} 
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit", value="Sprawdź!">
+        </form>
+        {% endblock %}
+    </div>
+    <div id="poprawnosc">
+        {% block poprawnosc %}
+        {% if odp %}
+        <p>Twoja odpowiedz: {{odp}}</p>
+            {% if algo_odp != None%}
+            <p>Odpowiedz obliczona przez algorytm: {{algo_odp }}</p>
+                {% if is_correct %}
+                <p> Twoja odpowiedź jest poprawna </p>
+                {% else %}
+                <p> Twoja odpowiedź jest błędna </p>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+        {% endblock %}
+    </div>
+    <div id="visualization">
+        {% block visual %}
+       
+        {% endblock %}
+    </div>
+{% endblock %}

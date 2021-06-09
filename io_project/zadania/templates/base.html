@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet"  href="{%  static  'css/style.css'  %}">
+    <title>Metody numeryczne</title>
+  </head>
+  <body>
+    {% block header %}
+    <div id="nav">
+        {% if user.is_authenticated %}
+         <a href="/">Wróć do wyboru zadania</a> Zalogowany użytkownik: <b>{{user.name}}</b>    <a href="/accounts/logout/">wyloguj się</a>    
+        {% else %}
+        <a href="/accounts/login/">zaloguj się</a>    <a href="/accounts/register/">rejestracja</a>
+        {% endif %}
+    </div> 
+    {% endblock %}  
+    <h1>Aplikacja do nauki metod numerycznych</h1>
+    <div id=content>
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% block footer %}
+    <div id="footer">
+
+    </div>
+    {% endblock %}
+  </body>
+</html>

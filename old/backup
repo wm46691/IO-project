@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="nazwa">
+        {% block nazwa %}
+        tu sie pojawi nazwa
+        {% endblock %}
+    </div>
+    <div id="polecenie">
+        {% block polecenie %}
+        tu sie wyswietli polecenie
+        {% endblock %}
+    </div>
+
+    <div id="odpowiedz">
+        {% block odpowiedz %} 
+        <form action="sub" method="POST">
+            {% csrf_token %}
+        
+            Wpisz odpowiedz: <input type="text" name="num1"><br>
+            <input type="submit", value="Sprawdź!">
+        </form>
+        {% endblock %}
+    </div>
+    <div id="visualization">
+        {% block visual %}
+        tu poakzemy wizualziajce
+        {% endblock %}
+    </div>
+{% endblock %}

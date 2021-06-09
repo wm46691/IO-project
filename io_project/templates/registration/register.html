@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+  <table>
+   <tr>
+    <td>Login :</td>
+    <td><input type="text"></td>
+   </tr>
+   <tr>
+    <td>Hasło :</td>
+    <td><input type="password"></td>
+   </tr>
+   <tr>
+    <td>Email :</td>
+    <td><input type="email"></td>
+   </tr>
+   <tr>
+    <td>Nr telefonu :</td>
+    <td>
+     
+     <input type="phone">
+    </td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Rejestruj się"></td>
+   </tr>
+  </table>
+ </form>
+{% endblock %}

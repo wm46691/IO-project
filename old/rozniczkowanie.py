@@ -29,3 +29,5 @@ def pochodne(a, b, ilosc_punktow, x, krok = 0.25, rodzaj = 'wprzod'):
 # y = pochodne(a, b, ilosc_punktow, np.cos, 0.25, 'wstecz')
 # plt.plot(x, y)
 # plt.show()
+
+print(pochodne_punktowe(-4, 2, 100, lambda  x: 2*x**2))

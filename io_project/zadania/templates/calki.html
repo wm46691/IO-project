@@ -1,0 +1,18 @@
+{% extends "zadanie.html" %}
+{% load static %}
+{% block title %}Calkowanie metodą prostokątów{% endblock %}
+{% block nazwa %}Calkowanie metodą prostokątów{% endblock %}
+{% block polecenie %}
+<p>Oblicz całkę funkcji {{ f }} metodą prostokątów na przedziale od {{ a }} do
+    {{ b }}, gdzie szerokość podstawy prostokąta wynosi {{ k }}.
+</p>
+<p>Jako odpowiedź wpisz wartość obliczonej całki</p>
+{% endblock %}
+
+{% block visual %}
+
+{% if odp %}
+<img src="{%  static  'images/my-gif.gif'  %}" class="plot"/>
+{% endif %}  
+
+{% endblock %}

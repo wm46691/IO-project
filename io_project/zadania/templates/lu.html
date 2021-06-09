@@ -1,0 +1,23 @@
+{% extends "zadanie.html" %}
+{% block title %}Rozkład macierzy LU{% endblock %}
+{% block nazwa %}Rozkład macierzy LU{% endblock %}
+{% block polecenie %} 
+<p>Znając macierz współczynników A oraz wektor rozwiązania b. 
+    Wyznacz macierze rozkładu L i U stosując metodę Doolittle\'a i oblicz rozwiązanie.'</p>
+    <p>Macierz do rozłożenia wygląda następująco: <br> <pre>{{A}}</pre> </p>
+
+    <p>Wektor b wygląda następująco: <br> <pre>{{b}}</pre></p>
+
+    <p>Jako odpowiedź podaj 3 wartości - x1, x2, x3 - oddzielone spacjami</p>
+{%endblock%}
+
+{% block visual %}
+
+{% if is_correct == False %}
+<p>Do wykonania zadania należy wykonać 3 kroki:</p>
+<p>Obliczyć macierz rozkładu L: <br> <pre>{{L}}</pre> </p>
+<p>Obliczyć macierz rozkładu U: <br> <pre>{{U}}</pre> </p>
+<p>Rozwiązać układ inv(L)*b = z: <br> <pre>{{Y}}</pre> </p>
+{% endif %}  
+
+{% endblock %}

@@ -160,4 +160,4 @@ def zadania_calkowanie():
 
 
 
-zadania_calkowanie()
+uklady_liniowe()

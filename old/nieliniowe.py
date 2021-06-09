@@ -40,5 +40,3 @@ def bisekcja(f, a, b, tol = 0.00001, ftol=0.0001):
         #wyznaczenie nowego srodka i zapisanie poprzedniego
         last_x = x
         x = (a+b)/2
-
-    

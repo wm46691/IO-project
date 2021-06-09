@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+<h3>Wybierz zadanie</h3>
+<a href="{% url 'rozklad_lu' %}">Rozklad LU</a>
+<a href="{% url 'calki' %}">Calkowanie</a>
+<a href="{% url 'rozniczkowanie' %}">Rozniczkowanie</a>
+<a href="{% url 'rownania_nieliniowe' %}">Rownania nieliniowe</a>
+{% else %}
+<p> Musisz się zalogowac, aby korzystać z zawartości strony</p>
+    <a href="/accounts/login/">zaloguj się</a>    <a href="/accounts/register/">rejestracja</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "zadanie.html" %}
+{% load static %}
+{% block title %}Rozwiązywanie równań nieliniowych{% endblock %}
+{% block nazwa %}Rozwiązywanie równań nieliniowych{% endblock %}
+
+{% block polecenie %}
+<p>Znajdź miejsce zerowe funkcji {{ f }} metodą bisekcji na przedziale od {{ a }} do
+    {{ b }}.
+</p>
+<p>Jako odpowiedź wpisz x dla którego funkcja w danym przydziale przyjmuje wartość 0</p>
+{% endblock %}
+
+{% block visual %}
+
+{% if odp %}
+<img src="{%  static  'images/my-gif.gif'  %}" class="plot"/>
+{% endif %}  
+
+{% endblock %}
